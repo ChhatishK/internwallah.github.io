@@ -1,0 +1,17 @@
+{
+    "name": "bharatintern",
+    "version": "1.0.0",
+    "description": "bharatntern",
+    "main": "index.js",
+    "scripts": {
+        "start": "vite"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.25",
+        "tailwindcss": "^3.3.2",
+        "vite": "^4.4.2"
+    }
+}
