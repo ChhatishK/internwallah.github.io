@@ -3,32 +3,35 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bharat Intern</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="shortcut icon"
-            href="images/bharatinternFavicon.png"
-            type="image/x-icon"
-        />
+        <title>Intern Wallah</title>
+        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+        
         <style>
             html {
                 scroll-behavior: smooth;
             }
+
+            
         </style>
     </head>
     <body>
         <nav class="bg-[#c3dbddfc]">
-            <div
+            <li
                 class="w-11/12 max-w-[1350px] flex flex-row justify-between mx-auto p-5 items-center"
             >
                 <a href="index.html"
                     ><img
-                        src="./images/bharatinternLogo.png"
+                        src="./images/logo.png"
                         width="198px"
                         class="cursor-pointer"
                 /></a>
-                <ul class="flex gap-16 font-bold font-sans">
+
+                
+
+                <ul class="sm:flex hidden gap-6 justify-between font-bold font-sans">
+                
                     <li
                         class="group transition-all duration-200 cursor-pointer"
                     >
@@ -78,8 +81,20 @@
                         ></div>
                     </li>
                 </ul>
+                <button class="block sm:hidden"><i class="fa-solid fa-bars" onclick="openMenu()" id="menuBtn"></i></button>
             </div>
+
         </nav>
+        <div class="hidden w-3/12justify-between p-4 absolute top-0 right-0 bg-white" id="menu">
+            <ul>
+                <li class="cursor-pointer"><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li class="cursor-pointer"><a href="#"  onclick="closeMenu()">VIP</a></li>
+                <li class="cursor-pointer"><a href="#WhyChooseUS" onclick="closeMenu()">About us</a></li>
+                <li class="cursor-pointer"><a href="#footer" onclick="closeMenu()">Contact us</a></li>
+                
+            </ul>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        </div>
 
         <!-- First Section-->
         <section>
@@ -90,7 +105,7 @@
                 <div class="space-y-4">
                     <h2 class="text-5xl opacity-80 leading-loose">
                         Unlock Your Potential,<br />
-                        With "Bharat Intern"
+                        With "Intern Wallah"
                     </h2>
                     <p>
                         Our goal is to empower the next generation of tech
@@ -98,7 +113,7 @@
                         experience in different fields. Our interns work
                         alongside industry experts to solve real-world problems
                         and gain the skills they need to succeed in their
-                        careers. At Bharat Intern, we believe that every student
+                        careers. At Intern Wallah, we believe that every student
                         deserves a chance to unlock their potential and pursue
                         their passions.
                     </p>
@@ -115,7 +130,7 @@
                 <img
                     src="./images/intro-img-2.jpg"
                     width="700px"
-                    class="-mr-36"
+                    class="-mr-36 hidden lg:block"
                 />
             </div>
         </section>
@@ -125,35 +140,38 @@
             <img
                 src="./images/graphic-img1.png"
                 width="720px"
-                class="opacity-25 absolute"
+                class="opacity-25 absolute hidden lg:block"
             />
             <p
-                class="flex justify-center text-green-950 font-semibold text-xl z-[30]"
+                class="flex flex-col items-center text-green-950 font-semibold text-xl z-[30]"
             >
                 WHY CHOOSE US !
             </p>
+
+            <!-- <div class="w-44 h-1 bg-green-900 align-middle"></div> -->
+
             <div
-                class="w-10/12 max-w-[1080px] mx-auto flex flex-row gap-12 mt-16"
+                class="w-10/12 max-w-[1080px] mx-auto flex lg:flex-row flex-col gap-12 md:mt-16 mt-6"
             >
                 <div
-                    class="flex flex-col bg-[#e3e3e3b4] p-10 rounded-3xl space-y-4 z-[40] hover:bg-[#c3dbdd97]"
+                    class="flex flex-col bg-[#f6f4f4b4] p-10 rounded-3xl space-y-4 z-[40] hover:bg-[#d5eff197]"
                 >
                     <img src="./images/networking.png" width="60px" />
                     <h2 class="text-xl">Networking Opportunities</h2>
                     <p class="text-lg opacity-50">
-                        At Bharat Intern, we understand the importance of
+                        At Intern Wallah, we understand the importance of
                         networking and building connections within your
                         industry. That's why we offer our interns a variety of
                         networking opportunities to help them build their
                         professional network and gain valuable contacts. By
-                        joining the Bharat Intern family, you'll have access to
+                        joining the Intern Wallah family, you'll have access to
                         a wealth of networking opportunities.
                     </p>
                 </div>
                 <div
-                    class="flex flex-col bg-[#e3e3e3b4] p-10 rounded-3xl space-y-4 z-[20] hover:bg-[#c3dbdd97]"
+                    class="flex flex-col bg-[#e3e3e3b4] p-10 rounded-3xl space-y-4 z-[20] hover:bg-[#d5eff197]"
                 >
-                    <img src="./images/real-world.png" width="60px" />
+                    <img src="./images/real-world.png" width="60px"/>
                     <h2 class="text-xl">Real World Experience</h2>
                     <p class="text-lg opacity-50">
                         We believe that the best way to learn is by doing. Our
@@ -166,7 +184,7 @@
                     </p>
                 </div>
                 <div
-                    class="flex flex-col bg-[#e3e3e3b4] p-10 rounded-3xl space-y-4 z-[20] hover:bg-[#c3dbdd97]"
+                    class="flex flex-col bg-[#e3e3e3b4] p-10 rounded-3xl space-y-4 z-[20] hover:bg-[#d5eff197]"
                 >
                     <img src="./images/personalised.png" width="60px" />
                     <h2 class="text-xl">Personalized Learning</h2>
@@ -186,9 +204,9 @@
         <!-- Third Section-->
         <section>
             <div
-                class="w-10/12 max-w-[1300px] mx-auto flex flex-row items-center space-x-44 mt-32 mb-32"
+                class="w-10/12 max-w-[1300px] mx-auto flex flex-row items-center lg:space-x-44 md:mt-32 mb-32"
             >
-                <img src="./images/success-img.png" width="450px" />
+                <img src="./images/success-img.png" width="450px" class="hidden lg:block"/>
                 <div class="flex flex-col items-center gap-6 opacity-95">
                     <h2 class="text-3xl font-semibold opacity-90">
                         " Start Strong, Finish Stronger ! "
@@ -197,7 +215,7 @@
                         "A GOOD START IS HALF DONE" BY ARISTOTLE.
                     </h3>
                     <p class="leading-7 text-center">
-                        At Bharat Intern, we believe that starting strong is the
+                        At Intern Wallah, we believe that starting strong is the
                         key to success. That's why we're dedicated to providing
                         college students with the skills, experience, and
                         knowledge they need to launch their careers and achieve
@@ -224,7 +242,7 @@
             <div
                 class="w-10/12 max-w-[1180px] mx-auto flex flex-row space-x-28 items-cente mb-28"
             >
-                <div class="space-y-10">
+                <div class="lg:space-y-10 space-y-3">
                     <h2 class="text-3xl font-semibold">
                         "Virtual internship Program !"
                     </h2>
@@ -243,38 +261,55 @@
                         </button>
                     </a>
                 </div>
-                <img src="./images/apply-now-img2.png" width="550px" />
+                <img src="./images/apply-now-img2.png" width="550px" class="hidden lg:block" />
             </div>
         </section>
 
         <!-- Footer Section-->
         <footer class="bg-[#92c7cabd]" id="footer">
             <div
-                class="w-10/12 max-w-[1180px] flex flex-row justify-between mx-auto py-20"
+                class="w-10/12 max-w-[1180px] flex flex-col  space-y-8 lg:flex-row md:justify-between mx-auto py-8"
             >
-                <div class="space-y-6">
-                    <h2 class="text-3xl opacity-90">Bharat Intern</h2>
+                <div class="flex flex-col mt-8 md:space-y-6 space-y-1">
+                    <h2 class="text-3xl opacity-90">Intern Wallah</h2>
                     <p class="opacity-95 text-lg">
-                        Unlock Your Potential, With "Bharat Intern"
+                        Unlock Your Potential, With "Intern Wallah"
                     </p>
                 </div>
                 <div class="flex flex-col">
-                    <h2 class="text-3xl opacity-90 mb-6">Contact Us</h2>
-                    <div class="flex flex-row space-x-4">
-                        <i></i>
-                        <p>Bhopal, Madhya Pradesh, India</p>
-                    </div>
-                    <div class="flex flex-row space-x-4">
-                        <i></i>
-                        <p>bharatintern.info@gmail.com</p>
-                    </div>
+                    <h2 class="text-3xl opacity-90 md:mb-6 mb-2">Contact Us</h2>
+                    
+                        
+                    <a href="https://www.google.com/maps/place/Migsun+Wynn,+Eta+II,+Greater+Noida,+Uttar+Pradesh+201310/@28.4950719,77.5355806,17z/data=!3m1!4b1!4m6!3m5!1s0x390ceaea8fc83f81:0x2ba02dba81de42b5!8m2!3d28.4953219!4d77.5379377!16s%2Fg%2F11lsngf2sk?entry=ttu" class="flex flex-row gap-3">
+                        <img src="./images/mapIcon.png" width="20px">Migsun Wynn, Greater Noida
+                    </a>
+                
+                    
+                    <a href="mailto: internwallah@gmail.com" class="flex flex-row gap-3">
+                        <img src="./images/mailIcon.png" class="w-6">internwallah.info@gmail.com
+                    </a>
+                        
                 </div>
 
                 <div class="flex flex-col">
-                    <h2 class="text-3xl opacity-90 mb-6">Follow Us</h2>
+                    <h2 class="text-3xl opacity-90 md:mb-6 mb-2">Follow Us</h2>
                     <div>
-                        <i></i>
-                        <i></i>
+                        
+                        <a href="https://www.instagram.com/_chhatish_yadav/" class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/instagramIcon.webp" class="w-4 h-4">
+                            Instagram
+                        </a>
+
+                        <a href="https://twitter.com/ChhatishKumarY1"  class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/twitterIcon.png" class="w-4 h-4">
+                            Twiter
+                        </a>
+                    
+                        <a href="https://www.linkedin.com/in/chhatish-kumar-18879a237/" class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/linkedinIcon.avif" class="w-4 h-4">
+                            Linkedin
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -283,8 +318,10 @@
         <!-- Copyright Section-->
         <div class="py-5 bg-black text-center bg-opacity-90">
             <p class="text-white">
-                Copyright © 2023 Bharat Intern. All rights reserved.
+                Copyright © 2023 Intern Wallah. All rights reserved.
             </p>
         </div>
+
+        <script src="index.js"></script>
     </body>
 </html>
