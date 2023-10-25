@@ -3,28 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bharat Intern</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="shortcut icon"
-            href="./images/bharatinternFavicon.png"
-            type="image/x-icon"
-        />
+        <title>Form Portal</title>
+        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
     </head>
     <body>
         <!-- NavBar-->
         <nav class="bg-[#c3dbddfc]">
-            <div
+            <li
                 class="w-11/12 max-w-[1350px] flex flex-row justify-between mx-auto p-5 items-center"
             >
                 <a href="index.html"
                     ><img
-                        src="./images/bharatinternLogo.png"
+                        src="./images/logo.png"
                         width="198px"
                         class="cursor-pointer"
                 /></a>
-                <ul class="flex gap-16 font-bold font-sans">
+
+                
+
+                <ul class="sm:flex hidden gap-5 justify-between font-bold font-sans">
+                
                     <li
                         class="group transition-all duration-200 cursor-pointer"
                     >
@@ -74,8 +79,21 @@
                         ></div>
                     </li>
                 </ul>
+                <button class="block sm:hidden"><i class="fa-solid fa-bars" onclick="openMenu()" id ="menuBtn"></i></button>
             </div>
+
         </nav>
+        <!-- Menu section -->
+        <div class="hidden w-3/12justify-between p-4 absolute top-0 right-0 bg-white" id="menu">
+            <ul>
+                <li class="cursor-pointer"><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li class="cursor-pointer"><a href="#"  onclick="closeMenu()">VIP</a></li>
+                <li class="cursor-pointer"><a href="index.html#WhyChooseUS" onclick="closeMenu()">About us</a></li>
+                <li class="cursor-pointer"><a href="#footer" onclick="closeMenu()">Contact us</a></li>
+                
+            </ul>
+            <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        </div>
 
         <!-- Offer Section-->
         <section class="mt-12 mb-28">
@@ -85,7 +103,7 @@
                 INTERNSHIPS WE OFFER !
             </p>
             <div
-                class="w-8/12 max-w-[1080px] mx-auto grid grid-cols-3 gap-x-12 gap-y-12 mt-20"
+                class="w-8/12 max-w-[1080px] mx-auto grid md:grid-cols-3 grid-cols-1 gap-x-12 gap-y-12 mt-20"
             >
                 <div
                     class="space-y-6 flex flex-col justify-center items-center bg-[#e3e3e3b4] hover:bg-[#c3dbdd97] rounded-2xl py-16"
@@ -95,7 +113,7 @@
                         Web Development <br />(Basic)
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -111,7 +129,7 @@
                         Full Stack Web- <br />Development
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -129,7 +147,7 @@
                     </h2>
                     <br /><br />
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -145,7 +163,7 @@
                         Artificial Intelligence
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -161,7 +179,7 @@
                         App Development
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -177,7 +195,7 @@
                         Machine Learning
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -193,7 +211,7 @@
                         Internet of Things
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -209,7 +227,7 @@
                         Bussiness Analytics
                     </h2>
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfuU7Nmy2Wbp0w3Er7pyH4CIYDf6N6yaN77X_KBpG-3XwFWmA/viewform"
+                        href="https://docs.google.com/forms/d/1SVMoZgcm6wQKwjfIDMohaXb0NVhbUw6vEjkvIRFgRq0/edit" target="_blank"
                         ><button
                             class="w-28 h-10 font-semibold bg-[#006251] hover:bg-[#09423a] transition-all duration-200 text-white font-sans rounded-lg"
                         >
@@ -222,31 +240,48 @@
 
         <footer class="bg-[#92c7cabd]" id="footer">
             <div
-                class="w-10/12 max-w-[1180px] flex flex-row justify-between mx-auto py-20"
+                class="w-10/12 max-w-[1180px] flex flex-col space-y-8 md:flex-row justify-between mx-auto py-20"
             >
-                <div class="space-y-6">
-                    <h2 class="text-3xl opacity-90">Bharat Intern</h2>
+                <div class="mt-8 md:space-y-6 space-y-1">
+                    <h2 class="text-3xl opacity-90">Intern Wallah</h2>
                     <p class="opacity-95 text-lg">
-                        Unlock Your Potential, With "Bharat Intern"
+                        Unlock Your Potential, With "Intern Wallah"
                     </p>
                 </div>
                 <div class="flex flex-col">
-                    <h2 class="text-3xl opacity-90 mb-6">Contact Us</h2>
-                    <div class="flex flex-row space-x-4">
-                        <i></i>
-                        <p>Bhopal, Madhya Pradesh, India</p>
-                    </div>
-                    <div class="flex flex-row space-x-4">
-                        <i></i>
-                        <p>bharatintern.info@gmail.com</p>
-                    </div>
+                    <h2 class="text-3xl opacity-90 md:mb-6 mb-2">Contact Us</h2>
+                    
+                        
+                    <a href="https://www.google.com/maps/place/Migsun+Wynn,+Eta+II,+Greater+Noida,+Uttar+Pradesh+201310/@28.4950719,77.5355806,17z/data=!3m1!4b1!4m6!3m5!1s0x390ceaea8fc83f81:0x2ba02dba81de42b5!8m2!3d28.4953219!4d77.5379377!16s%2Fg%2F11lsngf2sk?entry=ttu" class="flex flex-row gap-3">
+                        <img src="./images/mapIcon.png" width="20px">Migsun Wynn, Greater Noida
+                    </a>
+                
+                    
+                    <a href="mailto: internwallah@gmail.com" class="flex flex-row gap-3">
+                        <img src="./images/mailIcon.png" class="w-6">internwallah.info@gmail.com
+                    </a>
+                        
                 </div>
 
                 <div class="flex flex-col">
-                    <h2 class="text-3xl opacity-90 mb-6">Follow Us</h2>
+                    <h2 class="text-3xl opacity-90 md:mb-6 mb-2">Follow Us</h2>
                     <div>
-                        <i></i>
-                        <i></i>
+                        
+                        <a href="https://www.instagram.com/_chhatish_yadav/" class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/instagramIcon.webp" class="w-4 h-4">
+                            Instagram
+                        </a>
+
+                        <a href="https://twitter.com/ChhatishKumarY1"  class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/twitterIcon.png" class="w-4 h-4">
+                            Twiter
+                        </a>
+                    
+                        <a href="https://www.linkedin.com/in/chhatish-kumar-18879a237/" class="flex flex-row gap-2 mb-2 items-center">
+                            <img src="./images/linkedinIcon.avif" class="w-4 h-4">
+                            Linkedin
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -255,8 +290,9 @@
         <!-- Copyright Section-->
         <div class="py-5 bg-black text-center bg-opacity-90">
             <p class="text-white">
-                Copyright © 2023 Bharat Intern. All rights reserved.
+                Copyright © 2023 Intern Wallah. All rights reserved.
             </p>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
